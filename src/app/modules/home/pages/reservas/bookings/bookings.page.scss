@@ -1,0 +1,136 @@
+
+.container{
+    display:grid;
+    grid-template: 110px 300px 1fr 110px  /  1fr;
+    height: 100vh;
+    grid-template-areas:"header header"
+                        "slider slider"
+                        "contenido contenido"
+                        "footer footer" ;
+    
+    
+}
+
+.header{
+  grid-area:header;
+  width: 100%;
+  &__img1 img{
+    width: 100%;
+    vertical-align: top;
+  }
+  &__img2 img{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 25%;
+  }
+  &__menu{
+      width: 5%;
+      top:26px;
+      right:9px;
+      position: absolute;
+  }
+  &__title{
+      color:var(--ion-color-primary);
+      top:44px;
+      left:22px;
+      position: absolute;
+  }
+}
+.slider{
+    grid-area:slider;
+    width: 100%;
+    &__img{
+        width: 100%;
+    }
+}
+.contenido{
+  grid-area: contenido;
+  width: 100%;
+   &__button{
+    width: 60%;
+    margin-left: 20%;
+    height: 33px;
+    background: var(--ion-color-primary);
+   }
+   
+}  
+
+.activas{
+    width: 80%;
+    margin-left: 10%;
+    &__cards{
+    display:flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    }
+    &__card{
+        margin-left: 3px;
+        flex:0 0 auto;
+        width: 65px;
+        height: 65px;
+        border:0.5px solid var(--ion-btn-dark);
+    }
+    &__title{
+        font-family: var(--ion-base-font);
+        font-size: var(--ion-16px);
+    }
+}
+
+.proximas{
+  width: 80%;
+  margin-left: 10%;
+  &__cards{
+  display:flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  }
+  &__card{
+      margin-left: 3px;
+      flex:0 0 auto;
+      width: 65px;
+      height: 65px;
+      border:0.5px solid var(--ion-btn-dark);
+  }
+  &__title{
+      font-family: var(--ion-base-font);
+      font-size: var(--ion-16px);
+  }
+}
+.ultimas{
+  width: 80%;
+  margin-left: 10%;  
+  &__cards{
+  display:flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  }
+  &__card{
+      margin-left: 3px;
+      flex:0 0 auto;
+      width: 65px;
+      height: 65px;
+      border:0.5px solid var(--ion-btn-dark);
+  }
+  &__title{
+      font-family: var(--ion-base-font);
+      font-size: var(--ion-16px);
+  }
+}
+.footer{
+  grid-area: footer;
+  &__img1{
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+  }&__img2{
+    position: absolute;
+    width: 8%;
+    left:45%;
+    bottom: 30px;
+  }
+}
+h1{
+    margin-top:7px;
+    margin-bottom: 3px;
+}
