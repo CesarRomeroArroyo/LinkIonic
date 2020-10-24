@@ -1,0 +1,24 @@
+<img class="login__img-cover" src="/assets/img/13306.jpg">
+
+<ion-content class="ion-padding ion-text-center">  
+  <div class="login__img-floating-container">
+    <img class="login__img-floating" src="/assets/img/Puntos_Flotantes_arriba.png">
+  </div>
+  <article class="login__welcome">
+    <h2 class="login__title">Bienvenido</h2>
+    <p class="login__text">Disfruta tu tiempo y déjanos a nosotros las tareas rutinarias</p>
+  </article>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+  <div class="login__form-container">    
+    <ion-input formControlName="email" class="login__form-email" placeholder="Email"></ion-input>
+    <ion-input type="password" formControlName="password" class="login__form-password" placeholder="Contraseña"></ion-input>
+  </div>
+  <div class="login__buttons-container">
+    <ion-buttons class="login__buttons-group">
+      <ion-button class="login__button-login" [disabled]="loginForm.invalid" type="submit">Iniciar sesión</ion-button>    
+      <ion-button class="login__button-register">Registrarse</ion-button>
+    </ion-buttons>
+  </div>
+  </form>
+  <a class="login__recovery" href="#">Recuperar contraseña</a>
+</ion-content>

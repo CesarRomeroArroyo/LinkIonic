@@ -5,8 +5,22 @@ import { HomePage } from './home.page';
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
-  }
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'validate-reservation',
+    loadChildren: () => import('./pages/reservation/validate-reservation/validate-reservation.module').then( m => m.ValidateReservationPageModule)
+  },
+  {
+    path: 'reservation-again',
+    loadChildren: () => import('./pages/reservation/reservation-again/reservation-again.module').then( m => m.ReservationAgainPageModule)
+  },
+
 ];
 
 @NgModule({

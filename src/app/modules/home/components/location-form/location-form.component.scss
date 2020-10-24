@@ -1,0 +1,33 @@
+.location {
+    font-family: var(--ion-base-font);
+    
+    &__title {
+        font-size: 18px;
+        color: var(--ion-color-primary);
+        font-weight: 600;
+    }
+    &__text {
+        color: var(--ion-base-font-color);
+    }
+    &__icon-location {
+        padding: 5px;
+        color: var(--ion-color-primary);
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    &__country {
+        border-bottom: 1px solid var(--ion-base-font-color);
+        margin-bottom: 15px;
+    }
+    &__city {
+        border-bottom: 1px solid var(--ion-base-font-color);
+    }
+    &__icon-back {
+        margin-top: 24px;
+        padding: 7px;
+        border: 1px solid var(--ion-base-font-color);
+        font-size: 24px;
+        border-radius: 50%;
+        color: var(--ion-base-font-color);
+    }
+}
