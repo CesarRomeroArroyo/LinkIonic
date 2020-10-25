@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="showMenuPop($event)">  
+        <ion-icon class="reservation__menu-icon"  name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="reservation">
+  <img class="reservation__img-top" src="/assets/img/Puntos_Flotantes_arriba.png">  
+  <img class="reservation__img-triangle" src="/assets/img/Triangulo_Superior_Azul.png">
+  <article class="reservation__container ion-text-center">
+    <h2 class="reservation__user-title">John</h2>
+    <p class="reservation__middle-text">Tu reserva en</p>
+    <figure >
+      <img class="reservation__image-service ion-text-center" src="/assets/img/8050031263.png" alt="Reservation Image">
+    </figure>
+    <h3 class="reservation__middle-title">Parroquia La María</h3>
+    <p class="reservation____middle-text">Para el servicio de</p>
+    <h3>Eucaristía</h3>
+    <p>Ha sido confirmado para en el horario</p>
+    <h3 class="reservation__middle-title">Sáb. 3 de Octubre</h3>
+    <p class="reservation__hour">16:00 - 17:00</p>
+    <figure>
+      <img class="reservation__img-brand" src="/assets/img/LogoBlanco.png" alt="Logo Link">
+    </figure>
+    <div class="reservation__buttons-container">
+      <ion-buttons class="reservation__buttons-group">
+        <ion-button class="reservation__button-send">Liberar</ion-button>
+        <ion-button class="reservation__button-send">Validar reserva</ion-button>
+      </ion-buttons>
+    </div>
+  </article>  
+</ion-content>
+<img class="reservation__img-bottom" src="/assets/img/Puntos_Flotantes_abajo.png">

@@ -1,0 +1,65 @@
+ion-content {
+    font-family: var(--ion-base-font);
+}
+.login {
+    &__img-cover {
+        
+    }
+    &__img-floating-container {
+        position: relative;        
+    }
+    &__img-floating {
+        position: absolute;
+        top: 0;
+        top: -15px;
+        left: -15px;
+    }
+    &__welcome {
+        margin-top: 40px;
+        position: relative;
+        z-index: 2;
+    }
+    &__title {
+        color: var(--ion-color-primary);
+        font-size: var(--ion-32px);
+    }
+    &__text {
+        color: var(--ion-base-font-color);
+        font-weight: 400;
+        margin-top: 30px;
+    }
+    &__form-container {
+        margin: var(--ion-32px) 24px;
+    }
+    &__form-email {
+        border-bottom: 1px solid var(--ion-base-font-color);
+        color: var(--ion-base-font-color);
+    }
+    &__form-password {
+        border-bottom: 1px solid var(--ion-base-font-color);
+        color: var(--ion-base-font-color);
+    }
+    &__buttons-group {
+        display: flex;
+        flex-direction: column;
+    }
+    &__button-login {
+        background: var(--ion-color-primary);
+        color: var(--ion-color-light);
+        border-radius: 10px;
+        width: 250px;
+        height: 35px;
+        margin-bottom: 12px;
+    }
+    &__button-register {
+        background: var(--ion-link-dark-color);
+        color: var(--ion-color-light);
+        border-radius: 10px;
+        width: 250px;
+        height: 35px;
+        margin-bottom: 20px;
+    }
+    &__recovery {
+        color: var(--ion-link-dark-color);
+    }
+}
