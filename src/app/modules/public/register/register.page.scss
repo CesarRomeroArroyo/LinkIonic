@@ -1,0 +1,113 @@
+:host {
+  min-height: 100%;
+  
+  position: relative;
+}
+
+ion-toolbar {
+  --background: transparent;    
+}
+
+u {
+  color: var(--ion-color-primary);
+}
+
+.reservation {
+  font-family: var(--ion-base-font);    
+  
+  &__container {
+      position: relative;
+      z-index: 2;
+  }
+  &__img-top {
+      position: absolute;
+      top: 0;
+  }
+  &__img-bottom {
+      line-height:50px;
+      color:white;
+      text-align:center;
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+  }
+  &__img-triangle {
+      line-height:50px;
+      color:white;
+      text-align:center;
+      position:fixed;
+      z-index: 3;
+      top: 0;
+      right:0;
+      width: 90px;
+  }
+  &__menu-icon {
+      color: var(--ion-color-light);
+      font-size: 24px;
+  }
+  &__user-title {
+      position: relative;
+      font-size: 28px;
+      color: var(--ion-color-primary);
+      font-weight: 600;
+  }
+  &__form-container {
+    margin: var(--ion-32px) 10%;
+    color: #9CA5AE;
+  }
+  &__form {
+    &__input {
+      border: 1px solid var(--ion-color-primary);
+      margin: 5px 0;
+    }
+    &__input-select {
+      border: 1px solid var(--ion-color-primary);
+      margin: 5px 0;
+      --padding-start: 6px !important;
+      --placeholder-color: #5A6978;
+    }
+  }
+  &__conditions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    &__label {
+      font-size: 11px;
+    }
+    &__toggle {
+      width: 120px;
+      height: 25px;
+      color: var(--ion-color-primary);
+    }
+  }
+  
+  &__buttons-container {
+    
+  }
+  &__buttons-group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 28px;
+  }
+  &__button-send {    
+      width: 100%;
+      height: 50px;
+      border-radius: 7px;
+      background: var(--ion-color-primary);
+      color: var(--ion-color-light);      
+      margin-bottom: 12px;
+      font-size: 18px;
+      text-transform: capitalize !important;
+  }
+  &__back-container {
+    position: relative;
+    z-index: 2;
+  }
+  &__icon-back {
+      width: 40px;
+  }
+  
+}
+

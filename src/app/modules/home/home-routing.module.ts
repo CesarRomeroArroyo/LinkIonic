@@ -24,7 +24,6 @@ const routes: Routes = [
     path: 'liberar',
     loadChildren: () => import('./pages/reservas/liberar/liberar.module').then( m => m.LiberarPageModule)
   },
-  
   {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)

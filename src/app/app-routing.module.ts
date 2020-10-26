@@ -5,7 +5,7 @@ import { AuthGuard } from './core/guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./modules/landing/landing.module').then( m => m.LandingPageModule)
+    loadChildren: () => import('./modules/public/public.module').then( m => m.PublicPageModule),
   },
   {
     path: 'home',
