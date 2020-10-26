@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="showMenuPop($event)">  
+        <ion-icon class="reservation__menu-icon"  name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="reservation">
+  <img class="reservation__img-top" src="/assets/img/Puntos_Flotantes_arriba.png">  
+  <img class="reservation__img-triangle" src="/assets/img/Triangulo_Superior_Azul.png">
+  <article class="reservation__container ion-text-center">
+    <h2 class="reservation__user-title">Registrate</h2>    
+  </article>
+  <div class="reservation__form-container">
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+      <ion-input formControlName="name" class="reservation__form__input" placeholder="Nombre"></ion-input>
+      <ion-input formControlName="lastname" class="reservation__form__input" placeholder="Apellido"></ion-input>
+      <ion-input formControlName="email" class="reservation__form__input" placeholder="Email"></ion-input>
+      <ion-select class="reservation__form__input-select" placeholder="Género">
+        <ion-select-option value="f">Masculino</ion-select-option>
+        <ion-select-option value="m">Femenino</ion-select-option>
+      </ion-select>
+      <ion-input formControlName="mobilephone" class="reservation__form__input" placeholder="Número de celular"></ion-input>
+      <ion-input type="password" formControlName="password" class="reservation__form__input" placeholder="Contraseña"></ion-input>
+      <ion-input type="password" class="reservation__form__input" placeholder="Repite contraseña"></ion-input>
+      <div class="reservation__conditions">
+        <p class="reservation__conditions__label">Al crear una nueva cuenta en link aceptas el manejo de tus <u> DATOS PERSONALES
+           TERMINOS y CONDICIONES</u> publicados en nuestra pagina
+        </p>
+        <ion-toggle class="reservation__conditions__toggle" ></ion-toggle>
+      </div>
+      <ion-buttons class="reservation__buttons-group">
+        <ion-button [disabled]="registerForm.invalid" type="submit" expand="block" class="reservation__button-send">
+          Continuar</ion-button>
+      </ion-buttons>
+    </form>
+  </div>
+  <figure class="reservation__back-container ion-text-center">
+    <img class="reservation__icon-back" [routerLink]="['/login']" src="/assets/icon/Raster.png" alt="">
+  </figure>
+</ion-content>
+<img class="reservation__img-bottom" src="/assets/img/Puntos_Flotantes_abajo.png">

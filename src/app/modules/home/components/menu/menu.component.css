@@ -1,0 +1,36 @@
+.menu {
+  border: 1.5px solid var(--ion-color-primary);
+  font-family: var(--ion-base-font);
+  --padding-top: var(--ion-10px) !important;
+  --padding-bottom: var(--ion-10px) !important;
+}
+
+.menu__icon {
+  padding: 5px;
+  margin-right: 10px;
+  background: var(--ion-color-primary);
+  color: var(--ion-color-light);
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.icon-last {
+  --border-style: none;
+}
+
+.menu-text {
+  width: 150px;
+  font-size: 16px;
+  color: var(--ion-base-font-color);
+}
+
+.icon-info {
+  --padding-bottom: var(--ion-16px) !important;
+  font-size: 14px;
+}
+
+ion-item {
+  --inner-padding-bottom: 8px;
+  margin-right: 25px;
+}
+/*# sourceMappingURL=menu.component.css.map */

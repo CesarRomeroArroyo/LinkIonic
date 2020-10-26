@@ -8,7 +8,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #00E0E2;
+  --ion-color-primary: #00e0e2;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -16,12 +16,12 @@
   --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/
-  --ion-color-secondary: #1A1A38;
+  --ion-color-secondary: #1a1a38;
   --ion-color-secondary-rgb: 61, 194, 255;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;   
+  --ion-color-secondary-tint: #50c8ff;
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
@@ -80,16 +80,15 @@
   --ion-color-light-tint: #f5f6f9;
 
   /* button colors */
-  --ion-btn-dark: #5A6978;
+  --ion-btn-dark: #5a6978;
 
   /* font-colors */
 
-  --ion-base-font-color: #8190A5;
-  --ion-link-dark-color: #343F4B;
-
+  --ion-base-font-color: #8190a5;
+  --ion-link-dark-color: #343f4b;
 
   /* fonts */
-  --ion-base-font: 'Fira Sans';
+  --ion-base-font: "Fira Sans";
   --ion-base-font-weight: 400;
 
   /* sizes */
@@ -97,13 +96,34 @@
   --ion-16px: 16px;
   --ion-10px: 10px;
   --ion-100: 100%;
-  
+
   /* base tags */
   body {
     font-family: var(--ion-base-font);
   }
 }
 
+/* Popover menu width */
 
+ion-popover {
+  ion-backdrop {
+    opacity: 0.5 !important;
+  }
+  .popover-wrapper {
+    .popover-content {
+      width: 60vw;
+      border-radius: 2px;
+      max-width: 500px;
+    }
+  }
+}
 
+.popover-arrow.sc-ion-popover-ios {
+  width: 0 !important;
+}
 
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}

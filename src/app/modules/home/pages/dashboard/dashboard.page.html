@@ -1,0 +1,90 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="showMenuPop($event)">  
+        <ion-icon class="dashboard__menu-icon"  name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="dashboard">
+  <img class="dashboard__img-top" src="/assets/img/Puntos_Flotantes_arriba.png">
+  
+  <img class="dashboard__img-triangle" src="/assets/img/Triangulo_Superior_Azul.png">
+  <h2 class="dashboard__title">Bienvenido John!</h2>
+  <figure class="dashboard__figure">
+    <img src="/assets/img/Reapertura_Gimnasios_1.png" class="dashboard__img-cover" alt="Dashboard Cover">
+  </figure>
+  <div class="dashboard__location-container ion-text-center">
+    <div class="dashboard__location-text ion-text-center">Bogotá D.C / Colombia</div>
+    <ion-buttons class="dashboard__location-button-container" slot="end">
+      <ion-button (click)="showLocationPop()">
+        <ion-icon end class="dashboard__location-button" name="location-outline"></ion-icon>    
+      </ion-button>
+    </ion-buttons>    
+  </div>
+  <div class="dashboard__site-container">    
+    <ion-input class="ion-text-center dashboard__site" placeholder="¿Buscas algun sitio o categoría?">
+      <ion-icon class="dashboard__site-icon" name="search-outline"></ion-icon></ion-input>
+  </div>
+  <ion-slides>
+    <ion-slide class="dashboard__sections-container">
+      <ion-avatar class="dashboard__sections">
+        <ion-icon class="dashboard__sections-icon" name="cash-outline"></ion-icon>
+        <span class="dashboard__sections-text">Compras</span>
+      </ion-avatar>
+      <ion-avatar class="dashboard__sections">
+        <ion-icon class="dashboard__sections-icon" name="cash-outline"></ion-icon>
+        <span class="dashboard__sections-text">Reservas</span>
+      </ion-avatar>
+      <ion-avatar class="dashboard__sections">
+        <ion-icon class="dashboard__sections-icon" name="cash-outline"></ion-icon>
+        <span class="dashboard__sections-text">Recompensas</span>
+      </ion-avatar>
+      <ion-avatar class="dashboard__sections">
+        <ion-icon class="dashboard__sections-icon" name="cash-outline"></ion-icon>
+        <span class="dashboard__sections-text">Parqueadero</span>
+      </ion-avatar>
+    </ion-slide>
+  </ion-slides>
+
+  <h2 class="dashboard__action-title">Tus ultimas acciones</h2>
+
+  <ion-slides [options]="slideOps">
+    <ion-slide class="dashboard__action-history-slide">
+      <div class="dashboard__action-history">
+        <figure class="dashboard__action-history-container">
+          <img src="/assets/icon/8050031263.png">
+        </figure>
+        <ion-icon class="dashboard__action-history-badge" name="calendar-outline"></ion-icon>
+      </div>
+    </ion-slide>
+    <ion-slide class="dashboard__action-history-slide">
+      <div class="dashboard__action-history">
+        <figure class="dashboard__action-history-container">
+          <img src="/assets/icon/8050031263.png">
+        </figure>
+        <ion-icon class="dashboard__action-history-badge" name="trophy"></ion-icon>        
+      </div>
+    </ion-slide>
+    <ion-slide class="dashboard__action-history-slide">
+      <div class="dashboard__action-history">
+        <figure class="dashboard__action-history-container">
+          <img src="/assets/icon/tianshi.jpeg">
+        </figure>
+        <ion-icon class="dashboard__action-history-badge" name="cash-outline"></ion-icon>        
+      </div>
+    </ion-slide>
+    <ion-slide class="dashboard__action-history-slide">
+      <div class="dashboard__action-history">
+        <figure class="dashboard__action-history-container">
+          <img src="/assets/icon/8903219032.png">
+        </figure>
+        <ion-icon class="dashboard__action-history-badge" name="cash-outline"></ion-icon>        
+      </div>
+    </ion-slide>    
+  </ion-slides>
+
+</ion-content>
+<img class="dashboard__img-bottom" src="/assets/img/Puntos_Flotantes_abajo.png">

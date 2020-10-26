@@ -1,0 +1,78 @@
+ion-content {
+  font-family: var(--ion-base-font);
+}
+
+.login__img-floating-container {
+  position: relative;
+}
+
+.login__img-floating {
+  position: absolute;
+  top: 0;
+  top: -15px;
+  left: -15px;
+}
+
+.login__welcome {
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.login__title {
+  color: var(--ion-color-primary);
+  font-size: var(--ion-32px);
+}
+
+.login__text {
+  color: var(--ion-base-font-color);
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.login__form-container {
+  margin: var(--ion-32px) 24px;
+}
+
+.login__form-email {
+  border-bottom: 1px solid var(--ion-base-font-color);
+  color: var(--ion-base-font-color);
+}
+
+.login__form-password {
+  border-bottom: 1px solid var(--ion-base-font-color);
+  color: var(--ion-base-font-color);
+}
+
+.login__buttons-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__button-login {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-light);
+  border-radius: 10px;
+  width: 250px;
+  height: 35px;
+  margin-bottom: 12px;
+}
+
+.login__button-register {
+  background: var(--ion-link-dark-color);
+  color: var(--ion-color-light);
+  border-radius: 10px;
+  width: 250px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.login__recovery {
+  color: var(--ion-link-dark-color);
+}
+/*# sourceMappingURL=login.page.css.map */
