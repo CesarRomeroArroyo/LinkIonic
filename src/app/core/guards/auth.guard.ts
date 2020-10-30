@@ -9,13 +9,12 @@ import { Observable } from 'rxjs';
 export class AuthGuard implements CanActivate {
 
   constructor(
-    private storage: Storage,
     private router: Router
   ) { }
 
   async canActivate() {
-    const isLoggedIn = await this.storage.get("IS_LOGGED_IN");
-    if (isLoggedIn) {
+    const tokenUser = JSON.parse(localStorage.getItem('TOKEN'));
+    if (tokenUser?.authToken) {
       return true;
     }
     else {

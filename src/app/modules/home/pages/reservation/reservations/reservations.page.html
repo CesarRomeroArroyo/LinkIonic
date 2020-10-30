@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="showMenuPop($event)">  
+        <ion-icon class="reservation__menu-icon"  name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="reservation">
+  <img class="reservation__img-top" src="/assets/img/Puntos_Flotantes_arriba.png">
+  
+  <img class="reservation__img-triangle" src="/assets/img/Triangulo_Superior_Azul.png">
+  <h2 class="reservation__title">Tus reservas</h2>
+  <figure class="reservation__figure">
+    <img src="/assets/img/Reapertura_Gimnasios_1.png" class="reservation__img-cover" alt="reservation Cover">
+  </figure>
+  
+  <div class="item" [routerLink]="['/home/new-reservation']">
+    <ion-button class="reservation__button">
+      Adicionar
+    </ion-button>
+  </div>
+  <!--  -->
+
+  <div class="actives">
+    <h1 class="actives__title">Reservas Activas</h1>
+    <div class="actives__cards " >
+      
+    <div class="actives__card"*ngFor="let item of reservations" >
+      {{item.name}}
+      {{item.time}}
+    </div>
+    </div>
+  </div>
+  <div class="next">
+    <h1 class="next__title">Próximas Reservas</h1>
+    <div class="next__cards">
+    <div class="next__card"*ngFor="let item of products" >
+      <img [src]="item.image" width="100%" height="100%">
+    </div>
+    </div>
+  </div>
+  <div class="last">
+    <h1 class="last__title">Últimas 5 Reservas Tomadas</h1>
+    <div class="last__cards">
+    <div class="last__card"*ngFor="let item of last" >
+      <img [src]="item.image" width="100%" height="100%">
+    </div>
+    </div>
+  </div>
+  
+  <figure class="reservation__back-container ion-text-center">
+    <img [routerLink]="['/home/dashboard']" class="reservation__icon-back" src="/assets/icon/Raster.png" alt="">
+  </figure>
+
+
+</ion-content>
+<img class="reservation__img-bottom" src="/assets/img/Puntos_Flotantes_abajo.png">
