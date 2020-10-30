@@ -2,7 +2,6 @@ dist/
 tmp/
 app/**/*.js
 app/**/*.js.map
-www/
 platform/
 # dependencies
 node_modules/
