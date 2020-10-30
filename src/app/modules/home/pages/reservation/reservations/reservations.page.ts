@@ -31,7 +31,7 @@ export class ReservationsPage implements OnInit {
 
   ngOnInit() {
     this.reservation.getAllReservations().subscribe(response => {
-      
+      this.reservations = response;
     })
     
   }
