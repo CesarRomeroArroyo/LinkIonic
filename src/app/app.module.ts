@@ -10,9 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 import { ComponentsModule } from './modules/home/components/components.module'
+import { HttpconfigService } from './core/interceptors/httpconfig.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +29,11 @@ import { ComponentsModule } from './modules/home/components/components.module'
     IonicStorageModule.forRoot()
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpconfigService,
+      multi: true
+    },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AngularFireAuth
   ],

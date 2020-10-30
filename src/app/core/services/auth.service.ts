@@ -11,8 +11,7 @@ import { SuccessResponse } from '../models/success.model';
 })
 export class AuthService {
 
-  constructor(
-    private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   Authentication(userData: Auth): Observable<HttpResponse<SuccessResponse>>{
     return this.http.post<SuccessResponse>(`${environment.url_api}/auth`, userData, {observe: 'response'});

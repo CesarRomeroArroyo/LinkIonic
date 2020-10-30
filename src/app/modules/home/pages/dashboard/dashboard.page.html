@@ -12,7 +12,7 @@
   <img class="dashboard__img-top" src="/assets/img/Puntos_Flotantes_arriba.png">
   
   <img class="dashboard__img-triangle" src="/assets/img/Triangulo_Superior_Azul.png">
-  <h2 class="dashboard__title">Bienvenido John!</h2>
+  <h2 class="dashboard__title">Bienvenido {{userName}}!</h2>
   <figure class="dashboard__figure">
     <img src="/assets/img/Reapertura_Gimnasios_1.png" class="dashboard__img-cover" alt="Dashboard Cover">
   </figure>
@@ -34,7 +34,7 @@
         <ion-icon class="dashboard__sections-icon" name="cash-outline"></ion-icon>
         <span class="dashboard__sections-text">Compras</span>
       </ion-avatar>
-      <ion-avatar class="dashboard__sections">
+      <ion-avatar class="dashboard__sections" [routerLink]="['/home/reservations']">
         <ion-icon class="dashboard__sections-icon" name="cash-outline"></ion-icon>
         <span class="dashboard__sections-text">Reservas</span>
       </ion-avatar>

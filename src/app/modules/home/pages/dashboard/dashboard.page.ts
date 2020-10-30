@@ -11,7 +11,7 @@ import { LocationFormComponent } from '../../components/location-form/location-f
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-
+  userName;
   slideOps = { initialSlide: 1, slidesPerView: 4, centeredSlides: true, speed: 400 };
 
   constructor(
@@ -19,6 +19,7 @@ export class DashboardPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userName = JSON.parse(localStorage.getItem('TOKEN')).info;
   }
 
   async showMenuPop(eventPop) {
@@ -37,6 +38,6 @@ export class DashboardPage implements OnInit {
     await popoverLocation.present();
   }
 
-
+  
 
 }

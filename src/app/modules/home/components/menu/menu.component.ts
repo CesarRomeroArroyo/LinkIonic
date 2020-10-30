@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PopoverController } from '@ionic/angular';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -6,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    public popoverCtrl: PopoverController
+    ) { }
 
   ngOnInit() {}
+
+  logout() {
+    localStorage.removeItem('TOKEN');
+    this.popoverCtrl.dismiss();
+    this.router.navigateByUrl('/login');
+  }
 
 }

@@ -3,6 +3,6 @@
     <ion-item class="icon-info"><ion-icon class="menu__icon" name="person"></ion-icon><div class="menu-text">Mi perfil</div> </ion-item>
     <ion-item class="icon-info"><ion-icon class="menu__icon" name="person-circle-outline"></ion-icon><div class="menu-text">Soporte</div></ion-item>
     <ion-item class="icon-info"><ion-icon class="menu__icon" name="lock-closed-outline"></ion-icon><div class="menu-text">Cambiar contraseña</div></ion-item>
-    <ion-item class="icon-last"><ion-icon class="menu__icon" name="power-outline"></ion-icon><div class="menu-text">Cerrar sesión</div></ion-item>
+    <ion-item (click)="logout()" class="icon-last"><ion-icon class="menu__icon" name="power-outline"></ion-icon><div class="menu-text">Cerrar sesión</div></ion-item>
   </ion-list>
 </ion-content>

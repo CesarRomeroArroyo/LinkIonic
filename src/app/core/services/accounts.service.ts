@@ -9,11 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class AccountsService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
-  saveAccount(accountData: Account) {
-    return this.http.post<Account>(`${environment.url_api}/accounts`, accountData);
+  saveAccount(accountData: Account): Observable<HttpResponse<any>> {
+    return this.http.post<any>(`${environment.url_api}/accounts`, accountData);
   }
 }

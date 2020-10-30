@@ -1,0 +1,95 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="showMenuPop($event)">
+        <ion-icon class="reservation__menu-icon" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="reservation">
+  <img
+    class="reservation__img-top"
+    src="/assets/img/Puntos_Flotantes_arriba.png"
+  />
+
+  <img
+    class="reservation__img-triangle"
+    src="/assets/img/Triangulo_Superior_Azul.png"
+  />
+  <h2 class="reservation__title">Tu nueva reserva</h2>
+  <figure class="reservation__figure">
+    <img
+      src="/assets/img/Reapertura_Gimnasios_1.png"
+      class="reservation__img-cover"
+      alt="reservation Cover"
+    />
+  </figure>
+  <div class="reservation__location-container ion-text-center">
+    <div class="reservation__location-text ion-text-center">
+      Bogotá D.C / Colombia
+    </div>
+    <ion-buttons class="reservation__location-button-container" slot="end">
+      <ion-button (click)="showLocationPop()">
+        <ion-icon
+          end
+          class="reservation__location-button"
+          name="location-outline"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+  <div class="reservation__site-container">
+    <ng-autocomplete
+      #auto
+      [data]="autoCompleteData"
+      [searchKeyword]="keyword"
+      (selected)="selectEvent($event)"
+      [itemTemplate]="itemTemplate"
+      placeHolder="¿Dónde quieres reservar?"
+    >
+    </ng-autocomplete>
+
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item.name"></a>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+  </div>
+
+  <div class="reservation__date-container ion-text-center">
+    <ion-datetime class="reservation__date" [(ngModel)]="dateFormat" displayFormat="YYYY-MM-DD" 
+    placeholder="Fecha"></ion-datetime>        
+  </div>
+  
+  <div class="service-container" *ngFor="let date of dataSchedule">
+    <div class="service-info" *ngFor="let serv of date.serviceInfo.serviceData">
+      <h2 class="reservation__action-title">{{serv.name}}</h2>
+      <ion-slides [options]="slideOps">
+        <ion-slide class="reservation__action-history-slide" *ngFor="let hour of serv.available_times">
+          <div class="reservation__action-history" >
+            <ion-avatar class="reservation__sections">
+              <div (click)="reserveService(date, serv, hour)" class="reservation__hour">{{hour}}</div>
+            </ion-avatar>
+          </div>
+        </ion-slide>
+        
+      </ion-slides>
+    </div>
+  </div>
+  
+  <figure class="reservation__back-container ion-text-center">
+    <img [routerLink]="['/home/reservations']" class="reservation__icon-back" src="/assets/icon/Raster.png" alt="">
+  </figure>
+  
+</ion-content>
+<img
+  class="reservation__img-bottom"
+  src="/assets/img/Puntos_Flotantes_abajo.png"
+/>
+
+
+
