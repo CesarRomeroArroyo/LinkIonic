@@ -9,6 +9,17 @@
 </ion-header>
 
 <ion-content fullscreen class="reservation">
+  <ion-refresher class="reservation__refresh" slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content class="reservation__refresh-info"
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Actualizando...">
+    </ion-refresher-content>
+  </ion-refresher>
+  
+
+
   <img class="reservation__img-top" src="/assets/img/Puntos_Flotantes_arriba.png">
   
   <img class="reservation__img-triangle" src="/assets/img/Triangulo_Superior_Azul.png">
@@ -26,11 +37,12 @@
 
   <div class="actives">
     <h1 class="actives__title">Reservas Activas</h1>
-    <div class="actives__cards " >
-      
-    <div class="actives__card"*ngFor="let item of reservations" >
-      {{item.name}}
-      {{item.time}}
+    <div class="actives__cards" *ngIf="reservations">
+    <div class="actives__cards">
+      <div class="actives__card"*ngFor="let item of reservations" >
+        {{item.name}}
+        {{item.time}}
+      </div>
     </div>
     </div>
   </div>

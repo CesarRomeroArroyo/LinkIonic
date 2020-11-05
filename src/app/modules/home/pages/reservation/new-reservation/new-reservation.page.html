@@ -64,7 +64,9 @@
     <ion-datetime class="reservation__date" [(ngModel)]="dateFormat" displayFormat="YYYY-MM-DD" 
     placeholder="Fecha"></ion-datetime>        
   </div>
-  
+  <div *ngIf="validationMessage" class="error-message ion-text-center">
+    {{validationMessage}}
+  </div>
   <div class="service-container" *ngFor="let date of dataSchedule">
     <div class="service-info" *ngFor="let serv of date.serviceInfo.serviceData">
       <h2 class="reservation__action-title">{{serv.name}}</h2>
