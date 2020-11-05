@@ -18,7 +18,7 @@ import { LocationsService } from 'src/app/core/services/locations.service';
 export class NewReservationPage implements OnInit {
 
   slideOps = { initialSlide: 1, slidesPerView: 5, centeredSlides: true, speed: 400 };
-
+  validationMessage;
   merchantList;
   merchantActiveList;
   LocationList = [];
@@ -65,12 +65,16 @@ export class NewReservationPage implements OnInit {
   }
 
   selectEvent(item) {
-    let dataConfirm = [{
-      date: this.dateFormat?.substr(0, 10),
-      serviceInfo: item
-    }];
-    this.dataSchedule = dataConfirm;
-    this.schedule.addSchedule(dataConfirm);
+    if(this.dateFormat) {
+      let dataConfirm = [{
+        date: this.dateFormat?.substr(0, 10),
+        serviceInfo: item
+      }];
+      this.dataSchedule = dataConfirm;
+      this.schedule.addSchedule(dataConfirm);
+    }else {
+      this.validationMessage = "Debes seleccionar una fecha primero";
+    }
   }
 
   reserveService(dataReserve, service, hour) {
@@ -84,6 +88,7 @@ export class NewReservationPage implements OnInit {
       id: service.id
     }
     this.context.dateInfo = reservation;
+    console.log(this.context.dateInfo);
     this.router.navigateByUrl('/home/confirm-reservation');
   }
 

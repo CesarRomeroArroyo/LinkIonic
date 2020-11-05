@@ -1,6 +1,6 @@
 :host {
     min-height: 100%;
-    
+    background: var(--ion-color-primary);
     position: relative;
 }
 
@@ -11,6 +11,13 @@ ion-toolbar {
 .reservation {
     font-family: var(--ion-base-font);
     position: relative;
+    &__refresh {
+        position: relative;
+        z-index: 5;
+    }
+    &__refresh-info {
+        color: var(--ion-base-font-color);
+    }
     &__container {
         position: relative;
         z-index: 4;

@@ -10,6 +10,7 @@ import { MenuComponent } from '../../../components/menu/menu.component';
 })
 export class ReservationsPage implements OnInit {
   slideOps = { initialSlide: 1, slidesPerView: 4, centeredSlides: true, speed: 400 };
+  reservationsQuery;
   reservations;
   products: any[] = [
     {
@@ -30,11 +31,26 @@ export class ReservationsPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.reservation.getAllReservations().subscribe(response => {
+    this.getReservationList();
+  }
+
+  ngOnDestroy() {
+    this.reservationsQuery.unsubscribe();
+  }
+
+  getReservationList() {
+    this.reservationsQuery = this.reservation.getAllReservations().subscribe(response => {
       this.reservations = response;
     })
-    
   }
+
+  doRefresh(e){
+    setTimeout(() => {
+      this.getReservationList();
+      e.target.complete();
+    }, 1500);
+  }
+
 
   async showMenuPop(eventPop) {
     const popoverMenu = await this.popoverCtrl.create({
